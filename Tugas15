@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Tugas ke 16 penjumlahan kode</title>
+</head>
+<body>
+    <p id="Variabel"></p>
+    
+    <script>
+        let x = '10' + 10 + 10;
+        let y = 10 + 10 + '10';
+        let z = x + y;
+        document.getElementById('Variabel').innerHTML = z;
+    </script>
+</body>
+</html>
