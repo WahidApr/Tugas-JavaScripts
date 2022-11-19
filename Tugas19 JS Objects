@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Tugas 19 JS Objects</title>
+</head>
+<body>
+    <p id="demo"></p>
+    
+    <script>
+        // create an object
+        const person = {
+          firstName : 'john',
+          lastName : 'Doe'
+        };
+        alert(person.firstName + ' ' + person.lastName);
+      
+    </script>
+</body>
+</html>    
