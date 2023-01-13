@@ -1,0 +1,33 @@
+/// <reference types="cypress"/>
+
+describe('Working with inputs',() => {
+    before(()=> {
+        cy.visit('http://zero.webappsecurity.com/index.html')
+        cy.url().should('include','index.html')
+        cy.get('#signin_button').click()
+    });
+
+    it('Should login to the website with valid data', () => {
+        cy.fixture('user').then(user => {
+            const username = user.username
+            const password = user.password
+            cy.login(username, password)
+        })
+
+        cy.get('.brand').click()
+        cy.url().should('include','index.html')
+        cy.get('#online-banking').click()
+        cy.url().should('include','banking.html')
+        cy.get('#pay_bills_link').click()
+    });
+
+    it('Should display payments feature', () => {
+        cy.fixture('payments').then(payments => {
+        const amount = payments.amount
+        const description = payments.description
+        const date = payments.date
+        cy.payments(amount, description, date)
+    })
+
+    });
+});
