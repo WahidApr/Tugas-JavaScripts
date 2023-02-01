@@ -1,0 +1,19 @@
+/// < reference types="cypress" />
+
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import SearchPage from "./Searchpage";
+
+Given ('I search for the keyword', () => {
+    SearchPage.visit()
+})
+
+When ('I search for the keyword online banking in search feature', () => {
+    SearchPage.fillUsername('username')
+    SearchPage.fillPassword('password')
+    SearchPage.signIn()
+    SearchPage.fillKeyword('keyword')
+})
+
+Then ('I should see the direction of online banking', () => {
+    cy.get('.top_offset').should('be.visible')
+})
