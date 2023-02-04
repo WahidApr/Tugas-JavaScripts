@@ -1,0 +1,21 @@
+describe('Create New User', () => {
+    it('Successfully create new user', () => {
+        var user = {
+            "name":"Wahid",
+            "job":"QA Engineer"
+        }
+        [
+            {
+                "id": 1,
+                "name":"Wahid",
+                "job":"QA Engineer"
+            },
+            {
+                "id": 2,
+                "name":"Wahid",
+                "job":"QA Engineer"
+            }
+        ]
+
+    });
+})
